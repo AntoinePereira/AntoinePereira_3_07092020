@@ -6,7 +6,7 @@
   font-family: "Roboto";
   src: url("assets/Roboto-Regular.ttf");
 }
-@keyframes .container {
+.container {
   display: flex;
   flex-direction: column;
   max-width: 95%;
@@ -14,6 +14,7 @@
   text-align: center;
   font-family: Roboto;
 }
+
 .header__arrow {
   display: flex;
   justify-content: center;
