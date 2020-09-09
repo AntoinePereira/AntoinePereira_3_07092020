@@ -201,6 +201,8 @@ footer .lien-contact {
   width: 85%;
   display: flex;
   justify-content: space-between;
+  animation: apparition-menu 1s;
+  animation-fill-mode: both;
 }
 .menu .entrees__element .pricetag {
   align-self: flex-end;
@@ -222,6 +224,8 @@ footer .lien-contact {
   width: 85%;
   display: flex;
   justify-content: space-between;
+  animation: apparition-menu 1s 0.5s;
+  animation-fill-mode: both;
 }
 .menu .main-dish__element .pricetag {
   align-self: flex-end;
@@ -243,6 +247,8 @@ footer .lien-contact {
   width: 85%;
   display: flex;
   justify-content: space-between;
+  animation: apparition-menu 1s 1s;
+  animation-fill-mode: both;
 }
 .menu .desserts .desserts__element .pricetag {
   align-self: flex-end;
@@ -276,6 +282,16 @@ footer .lien-contact {
   box-shadow: 0 0.3em 0.3em 0.3em grey;
 }
 
+@keyframes apparition-menu {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .loading_page {
   /*--------------------------------------------------page chargement------------------------------*/
   background-color: white;
@@ -355,7 +371,6 @@ footer .lien-contact {
     width: 0;
     height: 0;
     overflow: hidden;
-    display: none;
   }
 }
 @keyframes heart-filling {
