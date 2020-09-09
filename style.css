@@ -15,20 +15,8 @@
   font-family: Roboto;
 }
 
-.header__arrow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header__arrow img {
-  width: 1.5em;
-  height: 1.5em;
-  position: absolute;
-  top: 2.5em;
-  left: 2em;
-}
-
 header h1 {
+  /*------------------------------------------page acceuil--------------------------*/
   font-family: Shrikhand;
   margin-bottom: 0.3em;
 }
@@ -156,6 +144,20 @@ footer .lien-contact {
   max-width: 100%;
 }
 
+.header__arrow {
+  /*------------------------------------------------------page menu-----------*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__arrow img {
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  top: 2.5em;
+  left: 2em;
+}
+
 .menu {
   text-align: left;
   background-color: #f6f6f6;
@@ -275,6 +277,7 @@ footer .lien-contact {
 }
 
 .loading_page {
+  /*--------------------------------------------------page chargement------------------------------*/
   background-color: white;
   width: 100%;
   height: 100%;
@@ -348,14 +351,14 @@ footer .lien-contact {
   }
 }
 @keyframes loadpage {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(9999px);
+  to {
+    width: 0;
+    height: 0;
+    overflow: hidden;
   }
 }
 @keyframes heart-filling {
+  /*---------------------------------------------------------icones heart-----------------------*/
   0% {
     color: #99E2D0;
   }
@@ -421,8 +424,11 @@ footer .lien-contact {
   }
 }
 #heart-icon {
-  font-size: 15px;
-  stroke-width: 5px;
+  font-size: 1.3em;
+  color: #99E2D0;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 #heart-icon:hover {
   animation: heart-filling 1s;
