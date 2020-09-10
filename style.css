@@ -6,6 +6,84 @@
   font-family: "Roboto";
   src: url("assets/Roboto-Regular.ttf");
 }
+@keyframes heart-filling {
+  /*---------------------------------------------------------icones heart-----------------------*/
+  0% {
+    color: #99E2D0;
+  }
+  10% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 10%, #99E2D0 0%);
+    -webkit-text-stroke-width: 0px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  20% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 20%, #99E2D0 10%);
+    -webkit-text-stroke-width: 0px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  30% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 30%, #99E2D0 20%);
+    -webkit-text-stroke-width: 0px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  40% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 40%, #99E2D0 30%);
+    -webkit-text-stroke-width: 0px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 50%, #99E2D0 40%);
+    -webkit-text-stroke-width: 0px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  60% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 60%, #99E2D0 50%);
+    -webkit-text-stroke-width: 0px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  70% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 70%, #99E2D0 60%);
+    -webkit-text-stroke-width: 0px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  80% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 80%, #99E2D0 70%);
+    -webkit-text-stroke-width: 0px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  90% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 90%, #99E2D0 80%);
+    -webkit-text-stroke-width: 0px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+    -webkit-text-stroke-width: 0px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+#heart-icon {
+  font-size: 1.3em;
+  color: #99E2D0;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+#heart-icon:hover {
+  animation: heart-filling 1s;
+  animation-fill-mode: forwards;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -114,16 +192,6 @@ header h1 {
   display: flex;
   justify-content: space-between;
   color: black;
-  /*#heart-icon{
-  	align-self: center;
-  	color: pink;
-
-  }*/
-}
-.restaurants__thumbnail--tag:hover {
-  fill: #9356DC;
-  stroke: grey;
-  stroke-width: 5%;
 }
 
 footer {
@@ -140,10 +208,6 @@ footer .lien-contact {
   color: white;
 }
 
-.main img {
-  max-width: 100%;
-}
-
 .header__arrow {
   /*------------------------------------------------------page menu-----------*/
   display: flex;
@@ -156,6 +220,10 @@ footer .lien-contact {
   position: absolute;
   top: 2.5em;
   left: 2em;
+}
+
+.main img {
+  max-width: 100%;
 }
 
 .menu {
@@ -210,6 +278,9 @@ footer .lien-contact {
   animation-fill-mode: both;
   display: flex;
 }
+.menu .entrees__element:hover .fa {
+  animation: rotation 250ms 250ms;
+}
 .menu .entrees__element--pricetag {
   align-self: flex-end;
   font-weight: bold;
@@ -217,8 +288,9 @@ footer .lien-contact {
 }
 .menu .entrees__element--text {
   padding: 1em;
+  overflow: hidden;
   text-overflow: ellipsis !important;
-  /*-----------------------------PB------------*/
+  white-space: nowrap;
 }
 .menu .entrees__element--checkedicon {
   background-color: #99E2D0;
@@ -251,10 +323,13 @@ footer .lien-contact {
   animation: apparition-menu 1s 0.5s;
   animation-fill-mode: both;
 }
-.menu .main-dish__element:hover > .entrees__element--checkedicon {
+.menu .main-dish__element:hover > .main-dish__element--checkedicon {
   animation: apparition-checkedicon 500ms 0s ease-in-out;
   animation-fill-mode: both;
   display: flex;
+}
+.menu .main-dish__element:hover .fa {
+  animation: rotation 250ms 250ms;
 }
 .menu .main-dish__element--pricetag {
   align-self: flex-end;
@@ -263,8 +338,8 @@ footer .lien-contact {
 }
 .menu .main-dish__element--text {
   padding: 1em;
+  overflow: hidden;
   text-overflow: ellipsis !important;
-  /*-----------------------------PB------------*/
 }
 .menu .main-dish__element--checkedicon {
   background-color: #99E2D0;
@@ -297,10 +372,13 @@ footer .lien-contact {
   animation: apparition-menu 1s 1s;
   animation-fill-mode: both;
 }
-.menu .desserts__element:hover > .entrees__element--checkedicon {
+.menu .desserts__element:hover > .desserts__element--checkedicon {
   animation: apparition-checkedicon 500ms 0s ease-in-out;
   animation-fill-mode: both;
   display: flex;
+}
+.menu .desserts__element:hover .fa {
+  animation: rotation 250ms 250ms;
 }
 .menu .desserts__element--pricetag {
   align-self: flex-end;
@@ -309,13 +387,15 @@ footer .lien-contact {
 }
 .menu .desserts__element--text {
   padding: 1em;
+  overflow: hidden;
   text-overflow: ellipsis !important;
-  /*-----------------------------PB------------*/
+  white-space: nowrap;
 }
 .menu .desserts__element--checkedicon {
   background-color: #99E2D0;
   color: white;
   width: 20%;
+  display: none;
   text-align: center;
 }
 .menu .desserts__element--checkedicon .fa-check-circle {
@@ -362,10 +442,18 @@ footer .lien-contact {
 }
 @keyframes apparition-checkedicon {
   0% {
-    transform: translateX(100%) rotate(0deg);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(0%) rotate(360deg);
+    transform: translateX(0%);
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 .loading_page {
@@ -447,84 +535,8 @@ footer .lien-contact {
     width: 0;
     height: 0;
     overflow: hidden;
+    display: none;
   }
-}
-@keyframes heart-filling {
-  /*---------------------------------------------------------icones heart-----------------------*/
-  0% {
-    color: #99E2D0;
-  }
-  10% {
-    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 10%, #99E2D0 0%);
-    -webkit-text-stroke-width: 0px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  20% {
-    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 20%, #99E2D0 10%);
-    -webkit-text-stroke-width: 0px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  30% {
-    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 30%, #99E2D0 20%);
-    -webkit-text-stroke-width: 0px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  40% {
-    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 40%, #99E2D0 30%);
-    -webkit-text-stroke-width: 0px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  50% {
-    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 50%, #99E2D0 40%);
-    -webkit-text-stroke-width: 0px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  60% {
-    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 60%, #99E2D0 50%);
-    -webkit-text-stroke-width: 0px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  70% {
-    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 70%, #99E2D0 60%);
-    -webkit-text-stroke-width: 0px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  80% {
-    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 80%, #99E2D0 70%);
-    -webkit-text-stroke-width: 0px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  90% {
-    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 90%, #99E2D0 80%);
-    -webkit-text-stroke-width: 0px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  100% {
-    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
-    -webkit-text-stroke-width: 0px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-#heart-icon {
-  font-size: 1.3em;
-  color: #99E2D0;
-  -webkit-text-fill-color: white;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-}
-#heart-icon:hover {
-  animation: heart-filling 1s;
-  animation-fill-mode: forwards;
 }
 
 /*# sourceMappingURL=style.css.map */

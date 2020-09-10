@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'Shrikhand';
-    src: url('assets/Shrikhand-Regular.ttf');
+		font-family: 'Shrikhand';
+		src: url('assets/Shrikhand-Regular.ttf');
 }
  @font-face{   
-    font-family: 'Roboto';
-    src: url('assets/Roboto-Regular.ttf');
+		font-family: 'Roboto';
+		src: url('assets/Roboto-Regular.ttf');
 }
 $font-family: (title: Shrikhand, text: Roboto);
 
@@ -21,8 +21,6 @@ $color-dark-background: #eaeaea;
 	font-size: 0.8em;
 	margin-bottom: 1.3em;
 	height: 4em;
-	
-	
 }
 @mixin boutton{
 	margin-bottom: 2em;
@@ -42,8 +40,83 @@ $color-dark-background: #eaeaea;
 		box-shadow: 0 0.3em 0.3em 0.3em grey;
 	}
 }
-
-
+@keyframes heart-filling {/*---------------------------------------------------------icones heart-----------------------*/
+	0% {
+		color: $color-accent;
+	}
+	10% {
+		background: linear-gradient(0deg, $color-secondary 0%, $color-primary 10%, $color-accent 0%);
+		-webkit-text-stroke-width: 0px;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	20% {
+		background: linear-gradient(0deg, $color-secondary 0%, $color-primary 20%, $color-accent 10%);
+		-webkit-text-stroke-width: 0px;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	30% {
+		background: linear-gradient(0deg, $color-secondary 0%, $color-primary 30%, $color-accent 20%);
+		-webkit-text-stroke-width: 0px;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	40% {
+		background: linear-gradient(0deg, $color-secondary 0%, $color-primary 40%, $color-accent 30%);
+		-webkit-text-stroke-width: 0px;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	50% {
+		background: linear-gradient(0deg, $color-secondary 0%, $color-primary 50%, $color-accent 40%);
+		-webkit-text-stroke-width: 0px;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	60% {
+		background: linear-gradient(0deg, $color-secondary 0%, $color-primary 60%, $color-accent 50%);
+		-webkit-text-stroke-width: 0px;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	70% {
+		background: linear-gradient(0deg, $color-secondary 0%, $color-primary 70%, $color-accent 60%);
+		-webkit-text-stroke-width: 0px;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	80% {
+		background: linear-gradient(0deg, $color-secondary 0%, $color-primary 80%, $color-accent 70%);
+		-webkit-text-stroke-width: 0px;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	90% {
+		background: linear-gradient(0deg, $color-secondary 0%, $color-primary 90%, $color-accent 80%);
+		-webkit-text-stroke-width: 0px;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	100% {
+		background: linear-gradient(0deg, $color-secondary 0%, $color-primary 100%);
+		-webkit-text-stroke-width: 0px;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+#heart-icon {
+	font-size: 1.3em;
+	color: $color-accent;
+	-webkit-text-fill-color: white;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+	&:hover {
+		
+		animation: heart-filling 1s;
+		animation-fill-mode: forwards;
+	}
+}
 .container{
 	display: flex;
 	flex-direction: column;
@@ -52,15 +125,9 @@ $color-dark-background: #eaeaea;
 	text-align: center;
 	font-family: map-get($font-family, text);
 }
-
-
-
-
 header h1{ /*------------------------------------------page acceuil--------------------------*/
 	font-family: map-get($font-family, title);
 	margin-bottom: 0.3em;
-
-	
 }
 .location{
 	padding: 0.5em;
@@ -74,7 +141,6 @@ header h1{ /*------------------------------------------page acceuil-------------
 	&__button{
 		@include boutton;
 	}
-
 }
 .howto{
 	text-align: left;
@@ -96,12 +162,12 @@ header h1{ /*------------------------------------------page acceuil-------------
 			color:white;
 			background-color: $color-primary;
 			border-radius: 50%;
-    		width: 1em;
-    		height: 1em;
-    		padding: 0.4em;
- 			text-align: center;  
- 			position:relative;
- 			right: 2em;
+				width: 1em;
+				height: 1em;
+				padding: 0.4em;
+			text-align: center;  
+			position:relative;
+			right: 2em;
 		}
 	}
 }
@@ -131,21 +197,9 @@ header h1{ /*------------------------------------------page acceuil-------------
 			display: flex;
 			justify-content: space-between;
 			color: black;
-			/*#heart-icon{
-				align-self: center;
-				color: pink;
-			
-			}*/
-			&:hover{
-				fill: $color-primary;
-  				stroke: grey;
-  				stroke-width: 5%;
-			}
 		}
 	}
 }
-
-
 footer{
 	background-color: black;
 	color: white;
@@ -159,18 +213,10 @@ footer{
 		color: white;
 	}
 }
-
-
-
-
-.main img{
-	max-width: 100%;
-}
 .header__arrow{   /*------------------------------------------------------page menu-----------*/
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 	img{
 		width: 1.5em;
 		height: 1.5em;
@@ -178,7 +224,9 @@ footer{
 		top: 2.5em;
 		left: 2em;
 		}
-
+}
+.main img{
+	max-width: 100%;
 }
 .menu{
 	text-align: left;
@@ -222,6 +270,9 @@ footer{
 				animation-fill-mode: both;
 				display: flex;
 			}
+			&:hover .fa{
+				animation: rotation 250ms 250ms;
+			}
 			&--pricetag{
 				align-self: flex-end;
 				font-weight: bold;
@@ -229,7 +280,9 @@ footer{
 			}
 			&--text{
 				padding:1em;
-				text-overflow: ellipsis!important;/*-----------------------------PB------------*/
+				overflow: hidden;
+				text-overflow: ellipsis!important;
+				white-space: nowrap;
 			}
 			&--checkedicon{
 				background-color: $color-accent;
@@ -257,10 +310,13 @@ footer{
 			display: flex;
 			justify-content: space-between;
 			overflow: hidden;
-			&:hover > .entrees__element--checkedicon{
+			&:hover > .main-dish__element--checkedicon{
 				animation: apparition-checkedicon 500ms 0s ease-in-out;
 				animation-fill-mode: both;
 				display: flex;
+			}
+			&:hover .fa{
+				animation: rotation 250ms 250ms;
 			}
 			&--pricetag{
 				align-self: flex-end;
@@ -269,7 +325,8 @@ footer{
 			}
 			&--text{
 				padding:1em;
-				text-overflow: ellipsis!important;/*-----------------------------PB------------*/
+				overflow: hidden;
+				text-overflow: ellipsis!important;
 			}
 			&--checkedicon{
 				background-color: $color-accent;
@@ -297,10 +354,13 @@ footer{
 			display: flex;
 			justify-content: space-between;
 			overflow: hidden;
-			&:hover > .entrees__element--checkedicon{
+			&:hover > .desserts__element--checkedicon{
 				animation: apparition-checkedicon 500ms 0s ease-in-out;
 				animation-fill-mode: both;
 				display: flex;
+			}
+			&:hover .fa{
+				animation: rotation 250ms 250ms;
 			}
 			&--pricetag{
 				align-self: flex-end;
@@ -309,13 +369,15 @@ footer{
 			}
 			&--text{
 				padding:1em;
-				text-overflow: ellipsis!important;/*-----------------------------PB------------*/
+				overflow: hidden;
+				text-overflow: ellipsis!important;
+				white-space: nowrap;
 			}
 			&--checkedicon{
 				background-color: $color-accent;
 				color: white;
 				width:20%;
-				
+				display: none;
 				text-align: center;
 				.fa-check-circle{
 					font-size: 1.5em;
@@ -350,15 +412,20 @@ footer{
 }
 @keyframes apparition-checkedicon{
 	0%{
-		transform: translateX(100%) rotate(0deg);
+		transform: translateX(100%);
 	}
 	100%{
-		transform: translateX(0%) rotate(360deg);
+		transform: translateX(0%);
 	}
 }
-
-
-
+@keyframes rotation{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
 .loading_page{ /*--------------------------------------------------page chargement------------------------------*/
 	background-color: white;
 	width: 100%;
@@ -376,7 +443,6 @@ footer{
 	}
 	animation: loadpage 1ms 3s;
 	animation-fill-mode: forwards;
-  
 }
 .loading-squares{
 	position:relative;
@@ -416,7 +482,6 @@ footer{
 	animation-delay:1.05s;
 }
 
-
 @keyframes anim-squares{
 	0%{
 		transform:scale(1);
@@ -433,7 +498,7 @@ footer{
 		width: 0;
 		height: 0;
 		overflow:hidden;
-
+		display: none;
 	}
 }
 
@@ -458,81 +523,4 @@ footer{
 
 
 
-@keyframes heart-filling {/*---------------------------------------------------------icones heart-----------------------*/
-0% {
-color: $color-accent;
-}
-10% {
-background: linear-gradient(0deg, $color-secondary 0%, $color-primary 10%, $color-accent 0%);
--webkit-text-stroke-width: 0px;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-20% {
-background: linear-gradient(0deg, $color-secondary 0%, $color-primary 20%, $color-accent 10%);
--webkit-text-stroke-width: 0px;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-30% {
-background: linear-gradient(0deg, $color-secondary 0%, $color-primary 30%, $color-accent 20%);
--webkit-text-stroke-width: 0px;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-40% {
-background: linear-gradient(0deg, $color-secondary 0%, $color-primary 40%, $color-accent 30%);
--webkit-text-stroke-width: 0px;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-50% {
-background: linear-gradient(0deg, $color-secondary 0%, $color-primary 50%, $color-accent 40%);
--webkit-text-stroke-width: 0px;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-60% {
-background: linear-gradient(0deg, $color-secondary 0%, $color-primary 60%, $color-accent 50%);
--webkit-text-stroke-width: 0px;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-70% {
-background: linear-gradient(0deg, $color-secondary 0%, $color-primary 70%, $color-accent 60%);
--webkit-text-stroke-width: 0px;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-80% {
-background: linear-gradient(0deg, $color-secondary 0%, $color-primary 80%, $color-accent 70%);
--webkit-text-stroke-width: 0px;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-90% {
-background: linear-gradient(0deg, $color-secondary 0%, $color-primary 90%, $color-accent 80%);
--webkit-text-stroke-width: 0px;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-100% {
-background: linear-gradient(0deg, $color-secondary 0%, $color-primary 100%);
--webkit-text-stroke-width: 0px;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-}
 
-#heart-icon {
-	font-size: 1.3em;
-	color: $color-accent;
-	-webkit-text-fill-color: white;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: black;
-	&:hover {
-		
-		animation: heart-filling 1s;
-		animation-fill-mode: forwards;
-	}
-}
