@@ -340,6 +340,7 @@ footer .lien-contact {
   padding: 1em;
   overflow: hidden;
   text-overflow: ellipsis !important;
+  white-space: nowrap;
 }
 .menu .main-dish__element--checkedicon {
   background-color: #99E2D0;
@@ -461,6 +462,8 @@ footer .lien-contact {
   background-color: white;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   position: absolute;
   z-index: 10;
   opacity: 100%;
