@@ -225,10 +225,17 @@ footer{
 		left: 2em;
 		}
 }
-.main img{
+.main{
+	position: relative;
+	margin-bottom: -100px;
+	 img{
 	max-width: 100%;
+	}	
 }
 .menu{
+	position: relative;
+	bottom:100px;
+	border-radius: 50px 50px 0px 0px;
 	text-align: left;
 	background-color: $color-background;
 	.titre{
@@ -401,6 +408,7 @@ footer{
 		margin-bottom: 2.5em;
 	}
 }
+
 @keyframes apparition-menu{
 	0%{
 		transform: translateY(20px);
@@ -505,7 +513,9 @@ footer{
 	}
 }
 
+/*@media (min-width: 768px){      Media tablet*/
 
+/*@media (min-width: 991px){      Media desktop*/
 
 
 

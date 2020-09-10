@@ -222,11 +222,18 @@ footer .lien-contact {
   left: 2em;
 }
 
+.main {
+  position: relative;
+  margin-bottom: -100px;
+}
 .main img {
   max-width: 100%;
 }
 
 .menu {
+  position: relative;
+  bottom: 100px;
+  border-radius: 50px 50px 0px 0px;
   text-align: left;
   background-color: #f6f6f6;
 }
@@ -541,5 +548,7 @@ footer .lien-contact {
     display: none;
   }
 }
+/*@media (min-width: 768px){      Media tablet*/
+/*@media (min-width: 991px){      Media desktop*/
 
 /*# sourceMappingURL=style.css.map */
