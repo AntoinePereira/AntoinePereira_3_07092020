@@ -130,8 +130,8 @@ $color-dark-background: #eaeaea;
 		-webkit-text-fill-color: transparent;
 	}
 }
-#heart-icon {
-	font-size: 1.3em;
+.fa-heart{
+	font-size: 1.3em!important;
 	color: $color-accent;
 	-webkit-text-fill-color: white;
 	-webkit-text-stroke-width: 1px;

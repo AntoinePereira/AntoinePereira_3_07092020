@@ -77,14 +77,14 @@
     -webkit-text-fill-color: transparent;
   }
 }
-#heart-icon {
-  font-size: 1.3em;
+.fa-heart {
+  font-size: 1.3em !important;
   color: #99E2D0;
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
-#heart-icon:hover {
+.fa-heart:hover {
   animation: heart-filling 1s;
   animation-fill-mode: forwards;
 }
