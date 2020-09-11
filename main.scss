@@ -1,3 +1,10 @@
+/*----------divers---------*/
+/*----------icones heart------*/
+/*----------page acceuil-----*/
+/*----------page menu-------*/
+/*----------page chargement----*/
+
+
 @font-face {
 		font-family: 'Shrikhand';
 		src: url('assets/Shrikhand-Regular.ttf');
@@ -39,6 +46,24 @@ $color-dark-background: #eaeaea;
 		filter: brightness(110%);
 		box-shadow: 0 0.3em 0.3em 0.3em grey;
 	}
+}
+@mixin tagstyle-menu{
+	background-color: white;
+			width: 85%;
+			display: flex;
+			justify-content: space-between;
+			overflow: hidden;
+}
+@mixin checkedicon{
+	background-color: $color-accent;
+				color: white;
+				width:20%;
+				display: none;
+				text-align: center;
+				.fa-check-circle{
+					font-size: 1.5em;
+					margin: auto;
+				}
 }
 @keyframes heart-filling {/*---------------------------------------------------------icones heart-----------------------*/
 	0% {
@@ -274,11 +299,7 @@ footer{
 		align-items: center;
 		&__element{
 			@include tagstyle;
-			background-color: white;
-			width: 85%;
-			display: flex;
-			justify-content: space-between;
-			overflow: hidden;
+			@include tagstyle-menu;
 			&:hover > .entrees__element--checkedicon{
 				animation: apparition-checkedicon 500ms 0s ease-in-out;
 				animation-fill-mode: both;
@@ -299,15 +320,7 @@ footer{
 				white-space: nowrap;
 			}
 			&--checkedicon{
-				background-color: $color-accent;
-				color: white;
-				width:20%;
-				display: none;
-				text-align: center;
-				.fa-check-circle{
-					font-size: 1.5em;
-					margin: auto;
-				}
+				@include checkedicon
 			}
 			animation: apparition-menu 1s;
 			animation-fill-mode: both;
@@ -319,11 +332,7 @@ footer{
 		align-items: center;
 		&__element{
 			@include tagstyle;
-			background-color: white;
-			width: 85%;
-			display: flex;
-			justify-content: space-between;
-			overflow: hidden;
+			@include tagstyle-menu;
 			&:hover > .main-dish__element--checkedicon{
 				animation: apparition-checkedicon 500ms 0s ease-in-out;
 				animation-fill-mode: both;
@@ -344,15 +353,7 @@ footer{
 				white-space: nowrap;
 			}
 			&--checkedicon{
-				background-color: $color-accent;
-				color: white;
-				width:20%;
-				display: none;
-				text-align: center;
-				.fa-check-circle{
-					font-size: 1.5em;
-					margin: auto;
-				}
+				@include checkedicon
 			}
 			animation: apparition-menu 1s 0.5s;
 			animation-fill-mode: both;
@@ -364,13 +365,9 @@ footer{
 		align-items: center;
 		&__element{
 			@include tagstyle;
-			background-color: white;
-			width: 85%;
-			display: flex;
-			justify-content: space-between;
-			overflow: hidden;
+			@include tagstyle-menu;
 			&:hover > .desserts__element--checkedicon{
-				animation: apparition-checkedicon 500ms 0s ease-in-out;
+				animation: apparition-checkedicon 500ms ease-in-out 0s;
 				animation-fill-mode: both;
 				display: flex;
 			}
@@ -389,15 +386,7 @@ footer{
 				white-space: nowrap;
 			}
 			&--checkedicon{
-				background-color: $color-accent;
-				color: white;
-				width:20%;
-				display: none;
-				text-align: center;
-				.fa-check-circle{
-					font-size: 1.5em;
-					margin: auto;
-				}
+				@include checkedicon
 			}
 			animation: apparition-menu 1s 1s;
 			animation-fill-mode: both;
@@ -473,8 +462,7 @@ footer{
 	background-color:$color-accent;
 	width:2em;
 	height:2em;
-	animation-name:anim-squares;
-	animation-duration:0.8s;
+	animation:anim-squares 0.8s;
 	animation-iteration-count:2;
 	animation-direction:normal;
 	transform:scale(.3);
@@ -510,7 +498,6 @@ footer{
 		background-color:$color-secondary;
 	}
 }
-
 @keyframes loadpage{
 	to{
 		width: 0;
@@ -519,19 +506,35 @@ footer{
 		display: none;
 	}
 }
-
-/*@media (min-width: 768px){      Media tablet*/
-
-@media (min-width: 991px){      /*Media desktop*/
+@media (min-width: 768px){      /*Media tablet*//*-----------------------------media queries-----------------*/
 	.firsthalf{
 		display: flex;
 		justify-content: space-around;
-		border: solid 0.2em $color-accent;
+		border: solid 0.1em $color-accent;
 	}
 	.topbox{
 		width:40%;
 		background-color: white;
-		border-right: solid 0.2em $color-accent;
+		border-right: solid 0.1em $color-accent;
+	}
+	.howto{
+		width: 40%;
+	}
+	.apercu-resto{
+		height: 200px;
+		overflow: hidden;
+	}
+}
+@media (min-width: 991px){      /*Media desktop*/
+	.firsthalf{
+		display: flex;
+		justify-content: space-around;
+		border: solid 0.1em $color-accent;
+	}
+	.topbox{
+		width:40%;
+		background-color: white;
+		border-right: solid 0.1em $color-accent;
 	}
 	.howto{
 		width: 40%;
@@ -542,8 +545,6 @@ footer{
 	.restaurants__thumbnail--photo{
 		width: 40em;
 	}
-
-
 	.photoresto{
 			height: 50vh;
 		}
@@ -582,14 +583,9 @@ footer{
 			align-items: center;
 		}
 	}
-	
-
-
-
 	footer{
 		display: flex;
 		flex-direction: column;
-
 		.footer__items{
 			display: flex;
 			justify-content: space-between;

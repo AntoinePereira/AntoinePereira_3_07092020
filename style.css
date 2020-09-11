@@ -1,3 +1,8 @@
+/*----------divers---------*/
+/*----------icones heart------*/
+/*----------page acceuil-----*/
+/*----------page menu-------*/
+/*----------page chargement----*/
 @font-face {
   font-family: "Shrikhand";
   src: url("assets/Shrikhand-Regular.ttf");
@@ -388,7 +393,7 @@ footer .lien-contact {
   animation-fill-mode: both;
 }
 .menu .desserts__element:hover > .desserts__element--checkedicon {
-  animation: apparition-checkedicon 500ms 0s ease-in-out;
+  animation: apparition-checkedicon 500ms ease-in-out 0s;
   animation-fill-mode: both;
   display: flex;
 }
@@ -505,8 +510,7 @@ footer .lien-contact {
   background-color: #99E2D0;
   width: 2em;
   height: 2em;
-  animation-name: anim-squares;
-  animation-duration: 0.8s;
+  animation: anim-squares 0.8s;
   animation-iteration-count: 2;
   animation-direction: normal;
   transform: scale(0.3);
@@ -555,19 +559,42 @@ footer .lien-contact {
     display: none;
   }
 }
-/*@media (min-width: 768px){      Media tablet*/
-@media (min-width: 991px) {
-  /*Media desktop*/
+@media (min-width: 768px) {
+  /*Media tablet*/
+  /*-----------------------------media queries-----------------*/
   .firsthalf {
     display: flex;
     justify-content: space-around;
-    border: solid 0.2em #99E2D0;
+    border: solid 0.1em #99E2D0;
   }
 
   .topbox {
     width: 40%;
     background-color: white;
-    border-right: solid 0.2em #99E2D0;
+    border-right: solid 0.1em #99E2D0;
+  }
+
+  .howto {
+    width: 40%;
+  }
+
+  .apercu-resto {
+    height: 200px;
+    overflow: hidden;
+  }
+}
+@media (min-width: 991px) {
+  /*Media desktop*/
+  .firsthalf {
+    display: flex;
+    justify-content: space-around;
+    border: solid 0.1em #99E2D0;
+  }
+
+  .topbox {
+    width: 40%;
+    background-color: white;
+    border-right: solid 0.1em #99E2D0;
   }
 
   .howto {
