@@ -192,7 +192,7 @@ header h1{ /*------------------------------------------page acceuil-------------
 				padding: 0.4em;
 			text-align: center;  
 			position:relative;
-			right: 2em;
+			right: 1em;
 		}
 	}
 }
@@ -542,12 +542,15 @@ footer{
 	.restaurants{
 		display: flex;
 	}
-	.restaurants__thumbnail--photo{
-		width: 40em;
-	}
 	.photoresto{
 			height: 50vh;
 		}
+	.apercu-resto{
+		height: 20vh;
+	}
+	.restaurants__thumbnail--photo{
+		width: 40em;
+		height: 100%;	}
 	.menu{
 		display:flex;
 		flex-direction: row;
