@@ -11,8 +11,8 @@
   font-family: "Roboto";
   src: url("assets/Roboto-Regular.ttf");
 }
+/*---------------------------------------------------------icones heart-------------------------------------------------------*/
 @keyframes heart-filling {
-  /*---------------------------------------------------------icones heart-----------------------*/
   0% {
     color: #99E2D0;
   }
@@ -98,8 +98,8 @@
   font-family: Roboto;
 }
 
+/*------------------------------------------page acceuil------------------------------------------------*/
 header h1 {
-  /*------------------------------------------page acceuil--------------------------*/
   font-family: Shrikhand;
   margin-bottom: 0.3em;
 }
@@ -213,8 +213,8 @@ footer .lien-contact {
   color: white;
 }
 
+/*------------------------------------------------------page menu-------------------------------*/
 .header__arrow {
-  /*------------------------------------------------------page menu-----------*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -476,8 +476,8 @@ footer .lien-contact {
     transform: rotate(360deg);
   }
 }
+/*--------------------------------------------------page chargement------------------------------*/
 .loading_page {
-  /*--------------------------------------------------page chargement------------------------------*/
   background-color: white;
   width: 100%;
   height: 100%;
@@ -559,9 +559,9 @@ footer .lien-contact {
     display: none;
   }
 }
+/*Media tablet*/
+/*-----------------------------media queries-----------------*/
 @media (min-width: 768px) {
-  /*Media tablet*/
-  /*-----------------------------media queries-----------------*/
   .firsthalf {
     display: flex;
     justify-content: space-around;
@@ -583,8 +583,8 @@ footer .lien-contact {
     overflow: hidden;
   }
 }
+/*Media desktop*/
 @media (min-width: 991px) {
-  /*Media desktop*/
   .firsthalf {
     display: flex;
     justify-content: space-around;
